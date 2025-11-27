@@ -1,4 +1,5 @@
 #Controle de refeitório
+PRECO_REFEICAO = 2.0
 nomes = []
 contas = []
 def cadastrar_usuario():
@@ -17,7 +18,7 @@ def listar_usuarios():
             print(f"{i + 1}. {nome} - Conta: R$ {contas[i]}")
 
 def adicionar_credito():
-    codigo = int(input("Digite o código do usuário (0 para primeiro, 1 para segundo, etc.): "))
+    codigo = int(input("Digite o código do usuário (1 para primeiro, 2 para segundo, etc.): "))-1
     valor = float(input("Digite o valor a ser creditado: "))
     if 0 <= codigo < len(nomes):
         contas[codigo] += valor
@@ -26,17 +27,17 @@ def adicionar_credito():
         print("Código de usuário inválido.")  
 
 def verificar_saldo():
-    codigo = int(input("Digite o código do usuário (0 para primeiro, 1 para segundo, etc.): "))
+    codigo = int(input("Digite o código do usuário (1 para primeiro, 2 para segundo, etc.): "))-1
     if 0 <= codigo < len(nomes):
         print(f"Saldo de {nomes[codigo]}: R$ {contas[codigo]}")
     else:
         print("Código de usuário inválido.")
         
 def acessar_refeitorio():
-    codigo = int(input("Digite o código do usuário (0 para primeiro, 1 para segundo, etc.): "))
+    codigo = int(input("Digite o código do usuário (1 para primeiro, 2 para segundo, etc.): "))-1
     if 0 <= codigo < len(nomes):
         if contas[codigo] >= 2:
-            contas[codigo] -= 2
+            contas[codigo] -= PRECO_REFEICAO
             print("Acesso liberado")
             print(f"{nomes[codigo]} acessou o refeitório. Saldo restante: R$ {contas[codigo]}")
         else:
