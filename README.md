@@ -3,36 +3,44 @@ Atividade da Disciplina Tecnicas de programação do Curso de Licenciatura em Co
 Problema fictício
 -
 O IFPI Zona Sul deseja implementar uma cobrança simbólica de R$ 2,00 para que seus servidores tenham acesso ao refeitório. Para isso, o diretor solicitou aos alunos do curso de Computação que desenvolvessem um sistema para realizar esse controle.
+# 🍽️ Controle de Refeitório
 
-Após uma reunião, ficou definido que o sistema funcionará de forma semelhante a uma conta bancária, permitindo que o servidor:
+Um sistema simples de gerenciamento de contas para acesso a um refeitório, desenvolvido em Python e operado via linha de comando (CLI).
 
-• Cadastre-se no sistema;
+## 📝 Descrição
 
-• Adicione créditos;
+Este projeto foi desenvolvido como atividade da disciplina "Técnicas de Programação" do Curso de Licenciatura em Computação.
 
-• Consulte o saldo;
+O sistema simula o controle de acesso a um refeitório, onde servidores de uma instituição podem cadastrar-se, adicionar créditos em uma conta virtual e utilizar esses créditos para acessar o local, com um custo fixo por acesso.
 
-• Acesse o refeitório (com desconto automático de R$ 2,00);
+## ✨ Funcionalidades
 
-• Liste todos os servidores cadastrados.
+-   **Cadastrar Usuário:** Adiciona um novo servidor ao sistema com saldo inicial zero.
+-   **Listar Usuários:** Exibe todos os servidores cadastrados, com seus respectivos códigos e saldos.
+-   **Adicionar Crédito:** Permite adicionar um valor à conta de um usuário existente.
+-   **Verificar Saldo:** Consulta o saldo atual de um usuário específico.
+-   **Acessar Refeitório:** Debita o valor de uma refeição (R$ 2,00) do saldo do usuário, se houver fundos suficientes, e libera o acesso.
+-   **Sair:** Encerra o programa.
 
-Funcionalidades do Sistema
--
-**Cadastrar usuário**
-- O sistema solicita o nome do servidor. Ao informar o nome, ele é adicionado à lista nomes e, simultaneamente, também é criado um elemento na lista contas com saldo inicial de R$ 0,00.
+## 🚀 Tecnologias Utilizadas
 
-**Listar usuários**
-- Exibe todos os nomes cadastrados na lista nomes.
+-   ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-**Adicionar crédito**
-- O sistema solicita o código do servidor e o valor a ser creditado. O valor informado é somado ao saldo existente na conta correspondente. Ou seja, na lista contas o valor informado é incrementado ao código(indice).
+## ⚙️ Como Usar
 
-**Verificar saldo**
-- O sistema solicita o código do servidor e exibe o saldo atual da conta vinculada a esse código. Ou seja, o sistema exibe o valor que exite na lista contas no código informado
+1.  Certifique-se de ter o [Python 3](https://www.python.org/downloads/) instalado.
+2.  Clone este repositório ou baixe o arquivo `Controle_refeitorio.py`.
+3.  Navegue até o diretório do projeto pelo seu terminal.
+4.  Execute o script com o seguinte comando:
 
-**Acessar refeitório**
-- O sistema solicita o código do servidor e verifica se o saldo é maior ou igual a R$ 2,00. Ou seja, se no indice da lista contas o valor é maior ou igual à R$ 2.00
+    ```bash
+    python Controle_refeitorio.py
+    ```
 
-- Se houver saldo suficiente, o sistema desconta R$ 2,00 e exibe a mensagem "Acesso liberado".
+5.  Siga as instruções apresentadas no menu interativo.
 
-- Caso contrário, exibe a mensagem "Acesso negado".
+## 👤 Autor
+
+**Nícolas H. Sousa Carvalho**
+
+[!LinkedIn](https://www.linkedin.com/in/nícolas-h-053a53396)
