@@ -34,7 +34,7 @@ O sistema simula o controle de acesso a um refeitório, onde servidores de uma i
 4.  Execute o script com o seguinte comando:
 
     ```bash
-    python Controle_refeitorio.py
+    python src/Controle_refeitorio.py
     ```
 
 5.  Siga as instruções apresentadas no menu interativo.
